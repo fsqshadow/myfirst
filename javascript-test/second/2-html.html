@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+
+/*#div1{width:100px;height:200px;background:yellow;position: absolute;left:-100px;top:100px;}
+#div2{width:30px; height:70px; background:black;position:absolute;top:70px;left:100px;color:#fff;}
+#div3{ background:blue;}
+input{
+	margin-bottom:20px;
+}*/
+</style>
+<!-- <script type="text/javascript" src="./jquery.js"></script> -->
+<script>
+
+	function fn1(){
+	alert(this);
+}
+	function fn2(){
+	alert(2);
+}
+/*document.attachEvent('onclick',funtion(){
+	fn1.call(document);
+});
+document.attachEvent('onclick',fn2);*/
+
+// attachEvent是在非标准的ie下才有的
+
+
+/*document.addEventListener('click',fn1,false);
+document.addEventListener('click',fn2,false);*/
+// 是否捕获：默认值是false；不捕获就是冒泡
+//捕获:true,不冒泡
+
+//封装
+function bind(obj,evname,fn){
+	if(obj.addEventListener){
+		obj.addEventListener(evname,fn,false);
+	}
+	else{
+		obj.attachEvent('on'+evname,function(){
+			fn.call(obj);
+		});
+	}
+
+}
+bind(document,'click',fn1);
+bind(document,'click',fn2);
+</script>
+</head>
+
+<body>
+
+<!-- <div id="div1">
+	<div id="div2">分享到</div>
+
+</div> -->
+</body>
+</html>

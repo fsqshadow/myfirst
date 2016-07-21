@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+
+/*#div1{width:100px;height:200px;background:yellow;position: absolute;left:-100px;top:100px;}
+#div2{width:30px; height:70px; background:black;position:absolute;top:70px;left:100px;color:#fff;}
+#div3{ background:blue;}
+input{
+	m*/argin-bottom:20px;
+}
+</style>
+<!-- <script type="text/javascript" src="./jquery.js"></script> -->
+<script>
+
+	function fn1(a,b){
+	alert(this);
+	alert(a + b);
+}
+// fn1();
+fn1.call(null,10,20);
+
+</script>
+</head>
+
+<body>
+
+<!-- <div id="div1">
+	<div id="div2">分享到</div>
+
+</div> -->
+</body>
+</html>

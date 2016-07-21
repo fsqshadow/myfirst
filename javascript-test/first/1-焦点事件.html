@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+/*#div1{ width:100px; height:100px; background:red; position:absolute;}
+#div2{ width:100px; height:100px; background:yellow; position:absolute;}*/
+input{
+	margin-bottom:20px;
+}
+</style>
+<script type="text/javascript" src="./jquery.js"></script>
+<script>
+$(function(){
+  $(document).click(function(){
+            alert($(window).scrollTop()); 
+        })
+       ;
+/*	$("input").focus(function(){
+		if(this.value=="请输入:"){
+			this.value="";
+		}
+
+		
+	});
+	$("input").blur(function(){
+		if(this.value==''){
+			this.value="请输入:"
+		}
+	});*/
+
+
+})
+</script>
+</head>
+
+<body>
+	<input type="text" name="" value="请输入:"><br/>
+<!-- 	<input type="text" name=""><br/>
+	<input type="text" name=""><br/>
+	<div id="div1">div</div><br/>
+	<input type="text" name=""><br/>
+	<a href="">百度</a> -->
+</body>
+</html>

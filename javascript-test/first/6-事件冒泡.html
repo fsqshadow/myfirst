@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+div{padding:40px;}
+#div1{width:100px;height;200px;border:1px solid red;display: none}
+#div2{ background:yellow;}
+#div3{ background:blue;}
+input{
+	margin-bottom:20px;
+}
+</style>
+<!-- <script type="text/javascript" src="./jquery.js"></script> -->
+<script>
+
+window.onload=function(){
+	var odiv1=document.getElementById('div1');
+	var obtn=document.getElementById('input1');
+
+	obtn.onclick=function(){
+		odiv1.style.display='block';
+	}
+	document.onclick=function(){
+		setTimeout(function(){
+			odiv1.style.dispaly='none';
+		},2000);
+		
+	}
+
+
+}
+
+
+</script>
+</head>
+
+<body>
+<input id="input1" type="button" name="" value="按钮">
+<div id="div1"></div>
+</body>
+</html>
